@@ -1,0 +1,15 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'students/CSS/Style.css' %}" />
+    <title>Student About page</title>
+  </head>
+  <body>
+    <h1>Welcome to Student About page.</h1>
+    <a href="{% url 'students:home' %}">Go to Student Home Page</a>
+    <script src="{% static 'students/JS/Script.js' %}"></script>
+  </body>
+</html>
