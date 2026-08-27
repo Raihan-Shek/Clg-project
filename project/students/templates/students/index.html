@@ -1,13 +1,80 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Student Home page</title> 
-</head> 
-<body> 
-    <h1>Welcome to Student Home page.</h1>
-    <a href="{% url 'students:about' %}">Go to Student About Page</a>
-</body> 
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Student Home Page</title>
+
+    <!-- Lucide for icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="{% static 'students/CSS/home/style.css' %}" />
+  </head>
+
+  <body>
+    <main class="container">
+      <section class="student-card">
+        <div class="student-header">
+          <div class="avatar">
+            <i data-lucide="graduation-cap"></i>
+          </div>
+
+          <div class="student-title">
+            <h1>Welcome, Student 👋</h1>
+            <span>Student Profile</span>
+          </div>
+        </div>
+
+        <div class="student-info">
+          <div class="info-item">
+            <i class="info-icon" data-lucide="user"></i>
+
+            <span class="info-label"> Name </span>
+
+            <span class="info-value"> John Doe </span>
+          </div>
+
+          <div class="info-item">
+            <i class="info-icon" data-lucide="id-card"></i>
+
+            <span class="info-label"> Roll Number </span>
+
+            <span class="info-value"> 2026001 </span>
+          </div>
+
+          <div class="info-item">
+            <i class="info-icon" data-lucide="book-open"></i>
+
+            <span class="info-label"> Course </span>
+
+            <span class="info-value"> Computer Science </span>
+          </div>
+
+          <div class="info-item">
+            <i class="info-icon" data-lucide="layers"></i>
+
+            <span class="info-label"> Semester </span>
+
+            <span class="info-value"> 3rd Semester </span>
+          </div>
+        </div>
+
+        <div class="shimmer"></div>
+      </section>
+
+      <a class="about-link" href="{% url 'students:about' %}">
+        <span>Go to Student About Page</span>
+
+        <i data-lucide="arrow-right"></i>
+      </a>
+    </main>
+
+    <script
+      type="module"
+      src="{% static 'students/JS/home/script.js'%}"
+    ></script>
+  </body>
 </html>
