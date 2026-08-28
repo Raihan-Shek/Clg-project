@@ -1,0 +1,244 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>State Council — Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet" /> -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="icon" href="{% static 'favicon.svg' %}" type="image/svg+xml" />
+    <link rel="alternate icon" href="{% static 'favicon.ico' %}" />
+    <!-- <link rel="stylesheet" href="{% static 'home/fonts/fonts.css' %}" /> -->
+    <link rel="stylesheet" href="{% static 'home/CSS/style.css' %}" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a href="{% url 'home:home' %}" class="brand">
+          <svg
+            class="brand-mark"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="16" cy="16" r="14" stroke-width="1.2" />
+            <path
+              d="M8 21 L16 9 L24 21"
+              stroke-width="1.2"
+              stroke-linejoin="round"
+            />
+            <path d="M8 21 H24" stroke-width="1.2" />
+          </svg>
+          State Council
+        </a>
+        <nav class="primary-nav" aria-label="Primary">
+          <ul>
+            <li><a href="{% url 'home:home' %}" class="active">Home</a></li>
+            <li><a href="{% url 'home:about' %}">About</a></li>
+            <li><a href="{% url 'home:home' %}#committees">Committees</a></li>
+            <li><a href="{% url 'home:home' %}#notices">Notices</a></li>
+          </ul>
+        </nav>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section class="hero">
+        <div class="wrap">
+          <div class="hero-copy">
+            <p class="eyebrow">Est. 1962 · Chamber of the State</p>
+            <h1>
+              Where the <em>state's business</em> is deliberated in the open.
+            </h1>
+            <p class="lede">
+              The State Council is the deliberative body responsible for
+              reviewing legislation, overseeing public expenditure, and
+              representing the interests of every district in session.
+            </p>
+            <div class="hero-actions">
+              <a href="about.html" class="btn btn-primary">About the Council</a>
+              <a href="#committees" class="btn btn-ghost">View Committees</a>
+            </div>
+            <div class="session-strip">
+              <span class="session-dot" aria-hidden="true"></span>
+              88th Regular Session — Day 42 of 120 — In Progress
+            </div>
+          </div>
+
+          <div class="chamber" aria-hidden="true">
+            <svg id="chamber-svg" viewBox="0 0 520 300"></svg>
+            <p class="chamber-caption">
+              64 seats · seating by current majority
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT PREVIEW ============ -->
+      <section class="block about-preview">
+        <div class="wrap">
+          <div class="reveal">
+            <p class="eyebrow">The Institution</p>
+            <h2>A council built on record, not rhetoric.</h2>
+          </div>
+          <div class="reveal">
+            <p class="lede" style="max-width: 62ch">
+              Every bill, budget line, and appointment considered by the Council
+              is a matter of public record. Members are elected from 64
+              districts and convene in regular and special sessions to review,
+              amend, and vote on the state's legislative agenda.
+            </p>
+            <div class="stat-row">
+              <div class="stat">
+                <span class="num">64</span>
+                <span class="label">Council Seats</span>
+              </div>
+              <div class="stat">
+                <span class="num">9</span>
+                <span class="label">Standing Committees</span>
+              </div>
+              <div class="stat">
+                <span class="num">120</span>
+                <span class="label">Days per Session</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ COMMITTEES ============ -->
+      <section class="block" id="committees">
+        <div class="wrap">
+          <div class="block-head reveal">
+            <div>
+              <p class="eyebrow">Standing Committees</p>
+              <h2>Where legislation is drafted before it reaches the floor.</h2>
+            </div>
+          </div>
+
+          <div class="committee-grid reveal-group">
+            <div class="committee-card reveal-child">
+              <span class="committee-code">FB</span>
+              <h3>Finance &amp; Budget</h3>
+              <p>Reviews revenue bills and the annual state budget.</p>
+            </div>
+            <div class="committee-card reveal-child">
+              <span class="committee-code">PW</span>
+              <h3>Public Works &amp; Infrastructure</h3>
+              <p>Oversees roads, transit, and public construction projects.</p>
+            </div>
+            <div class="committee-card reveal-child">
+              <span class="committee-code">HH</span>
+              <h3>Health &amp; Human Services</h3>
+              <p>Handles public health policy and welfare programs.</p>
+            </div>
+            <div class="committee-card reveal-child">
+              <span class="committee-code">ED</span>
+              <h3>Education</h3>
+              <p>Sets standards and funding for public schooling.</p>
+            </div>
+            <div class="committee-card reveal-child">
+              <span class="committee-code">EN</span>
+              <h3>Environment &amp; Resources</h3>
+              <p>Reviews land use, conservation, and utility policy.</p>
+            </div>
+            <div class="committee-card reveal-child">
+              <span class="committee-code">JR</span>
+              <h3>Judiciary &amp; Rules</h3>
+              <p>Manages procedural rules and judicial appointments.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ NOTICES ============ -->
+      <section class="block" id="notices">
+        <div class="wrap">
+          <div class="block-head reveal">
+            <div>
+              <p class="eyebrow">Public Notices</p>
+              <h2>Recent announcements</h2>
+            </div>
+            <a href="{% url 'home:about' %}" class="btn btn-ghost"
+              >Full Archive</a
+            >
+          </div>
+
+          <ul class="notice-list reveal-group">
+            <li class="notice-item reveal-child">
+              <span class="notice-date">Aug 24</span>
+              <span class="notice-title"
+                >Finance &amp; Budget Committee opens public comment on FY27
+                revenue bill.</span
+              >
+              <span class="notice-tag">Committee</span>
+            </li>
+            <li class="notice-item reveal-child">
+              <span class="notice-date">Aug 19</span>
+              <span class="notice-title"
+                >Council schedules floor vote on the Rural Broadband Access
+                Act.</span
+              >
+              <span class="notice-tag">Session</span>
+            </li>
+            <li class="notice-item reveal-child">
+              <span class="notice-date">Aug 12</span>
+              <span class="notice-title"
+                >Public hearing announced for redistricting review, District
+                14–19.</span
+              >
+              <span class="notice-tag">Hearing</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <h4>State Council</h4>
+            <p class="lede" style="font-size: 0.88rem">
+              The chamber of record for state legislation, open to the public in
+              every regular session.
+            </p>
+          </div>
+          <div>
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="{% url 'home:home' %}">Home</a></li>
+              <li><a href="{% url 'home:about' %}">About</a></li>
+              <li><a href="{% url 'home:about' %}#structure">Structure</a></li>
+              <li><a href="{% url 'home:about' %}#history">History</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li>Council Hall, District 1</li>
+              <li>clerk@statecouncil.gov</li>
+              <li>Mon–Fri, 9:00–17:00</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 State Council. Public record.</span>
+          <span>Session Hall · District 1</span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="{% static 'home/JS/script.js'%}"></script>
+  </body>
+</html>

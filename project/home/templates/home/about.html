@@ -1,0 +1,220 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>State Council — About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+   <link rel="icon" href="{% static 'favicon.svg' %}" type="image/svg+xml" />
+    <link rel="alternate icon" href="{% static 'favicon.ico' %}" />
+  <link rel="stylesheet" href="{% static 'home/CSS/style.css' %}" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="{% url 'home:home' %}" class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="14" stroke-width="1.2"/>
+          <path d="M8 21 L16 9 L24 21" stroke-width="1.2" stroke-linejoin="round"/>
+          <path d="M8 21 H24" stroke-width="1.2"/>
+        </svg>
+        State Council
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="{% url 'home:home' %}">Home</a></li>
+          <li><a href="{% url 'home:about' %}" class="active">About</a></li>
+          <li><a href="{% url 'home:about' %}#structure">Structure</a></li>
+          <li><a href="{% url 'home:about' %}#history">History</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow reveal">About the Institution</p>
+        <h1 class="reveal" style="font-size: clamp(2.3rem, 4.6vw, 3.4rem); margin-top: 0.5rem;">
+          A body of record, elected by district, accountable in session.
+        </h1>
+        <p class="lede reveal">
+          The State Council exists to turn public concerns into public law — deliberately,
+          on the record, and in view of the people it represents.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ MISSION ============ -->
+    <section class="block">
+      <div class="wrap about-preview">
+        <div class="reveal">
+          <p class="eyebrow">Mission</p>
+          <h2>Deliberation before decision.</h2>
+        </div>
+        <div class="reveal">
+          <p class="lede" style="max-width: 62ch;">
+            The Council's mandate is narrow by design: review legislation referred by
+            committee, allocate the state budget, confirm senior appointments, and
+            provide oversight of executive agencies. Every session is open to the public,
+            every vote is recorded, and every committee hearing accepts written testimony.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STRUCTURE ============ -->
+    <section class="block" id="structure">
+      <div class="wrap">
+        <div class="block-head reveal">
+          <div>
+            <p class="eyebrow">Composition</p>
+            <h2>How the Council is structured</h2>
+          </div>
+        </div>
+
+        <div class="structure-grid reveal-group">
+          <div class="structure-card reveal-child">
+            <span class="num">64</span>
+            <div class="label">Elected Members</div>
+          </div>
+          <div class="structure-card reveal-child">
+            <span class="num">1</span>
+            <div class="label">President of the Council</div>
+          </div>
+          <div class="structure-card reveal-child">
+            <span class="num">9</span>
+            <div class="label">Standing Committees</div>
+          </div>
+          <div class="structure-card reveal-child">
+            <span class="num">4yr</span>
+            <div class="label">Term Length</div>
+          </div>
+        </div>
+
+        <div class="reveal" style="margin-top: 2.8rem;">
+          <p class="lede" style="max-width: 66ch;">
+            Members are elected directly by their district for a four-year term, with
+            elections staggered so that no more than half the Council turns over at once.
+            The President of the Council is elected from within the sitting membership and
+            presides over floor sessions and procedural rulings.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HISTORY TIMELINE ============ -->
+    <section class="block" id="history">
+      <div class="wrap">
+        <div class="block-head reveal">
+          <div>
+            <p class="eyebrow">A Brief History</p>
+            <h2>How the Council took its current form</h2>
+          </div>
+        </div>
+
+        <div class="timeline reveal-group">
+          <div class="timeline-item reveal-child">
+            <span class="timeline-year">1962</span>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-body">
+              <h3>Council established</h3>
+              <p>
+                The State Council convenes for the first time with 40 seats, replacing
+                the earlier appointed advisory board.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-child">
+            <span class="timeline-year">1985</span>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-body">
+              <h3>Standing committees formalized</h3>
+              <p>
+                Nine permanent committees are chartered to review legislation before it
+                reaches the full floor, replacing ad-hoc review panels.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-child">
+            <span class="timeline-year">2003</span>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-body">
+              <h3>Redistricting expands the chamber</h3>
+              <p>
+                Following a statewide population review, Council membership grows from
+                48 to 64 seats to keep district representation proportional.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-child">
+            <span class="timeline-year">2019</span>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-body">
+              <h3>Public records go digital</h3>
+              <p>
+                Session transcripts, committee testimony, and vote records are published
+                online in full for the first time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT CTA ============ -->
+    <section class="block">
+      <div class="wrap reveal" style="text-align:center;">
+        <p class="eyebrow">Public Participation</p>
+        <h2 style="font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: 0.6rem auto 1.6rem; max-width: 34ch;">
+          Every committee hearing accepts written and spoken testimony.
+        </h2>
+        <a href="{% url 'home:home' %}#notices" class="btn btn-primary">See Upcoming Hearings</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h4>State Council</h4>
+          <p class="lede" style="font-size:0.88rem;">
+            The chamber of record for state legislation, open to the public
+            in every regular session.
+          </p>
+        </div>
+        <div>
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="{% url 'home:home' %}">Home</a></li>
+            <li><a href="{% url 'home:about' %}">About</a></li>
+            <li><a href="{% url 'home:about' %}#structure">Structure</a></li>
+            <li><a href="{% url 'home:about' %}#history">History</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>Council Hall, District 1</li>
+            <li>clerk@statecouncil.gov</li>
+            <li>Mon–Fri, 9:00–17:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 State Council. Public record.</span>
+        <span>Session Hall · District 1</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- <script type="module" src="script.js"></script> -->
+  <script type="module" src="{% static 'home/JS/script.js'%}"></script>
+</body>
+</html>
